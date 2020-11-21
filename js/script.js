@@ -15,14 +15,23 @@ for(let activeLink of activeLinks){
   activeLink.classList.remove('active');
 }
   
- /* add class 'active' to the clicked link */
- const activeArticles = document.querySelectorAll('.posts a.active');
+ /* [IN PROGRESS] add class 'active' to the clicked link */
+const clickedElement = this
+const activeLinks = document.querySelectorAll('.titles a.active');
 
- for(let activeArticle of activeArticles){
-   activeArticle.classList.remove('active');
- }
+for(let activeLink of activeLinks){
+  activeLink.classList.add('active');
+}
+
+console.log('clickedElement:', clickedElement);
+console.log('clickedElement (with plus): ' + clickedElement);
   
-/* remove class 'active' from all articles */
+/* [DONE] remove class 'active' from all articles */
+const activeArticles = document.querySelectorAll('.posts a.active');
+
+for(let activeArticle of activeArticles){
+  activeArticle.classList.remove('active');
+}
   
 /* get 'href' attribute from the clicked link */
   
